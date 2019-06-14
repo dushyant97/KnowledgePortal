@@ -12,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NewsComponent } from './news/news.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { SuggestionComponent } from './suggestion/suggestion.component';
 
 const appRoutes: Routes = [
   {
@@ -55,7 +56,8 @@ const appRoutes: Routes = [
     SignupComponent,
     NewsComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    SuggestionComponent
   ],
   imports: [
     BrowserModule,

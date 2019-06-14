@@ -1,0 +1,96 @@
+<div class="bg-image"> 
+    <div class="container-fluid">
+  
+        <form name="signup">
+        
+        <div class="login-box">
+        
+            <h1>SIGN UP</h1>           
+            
+            <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input placeholder="First Name" name="fname" type="text" autocomplete="off" [(ngModel)]="fname"
+                 #fnamecontrol="ngModel" required>
+            </div>
+            <div *ngIf="fnamecontrol.invalid && (fnamecontrol.dirty || fnamecontrol.touched)" class="alert alert-danger"
+            style="text-align: justify; background-color: lightyellow; color: black">
+                <div *ngIf="fnamecontrol.errors.required">First Name is required.</div>
+            </div>  
+
+            <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input placeholder="Last Name" name="lname" type="text" autocomplete="off" [(ngModel)]="lname"
+                #lnamecontrol="ngModel" required>
+            </div>
+            <div *ngIf="lnamecontrol.invalid && (lnamecontrol.dirty || lnamecontrol.touched)" class="alert alert-danger"
+            style="text-align: justify; background-color: lightyellow; color: black">
+                <div *ngIf="lnamecontrol.errors.required">Last Name is required.</div>
+            </div> 
+
+            <div class="textbox">
+                <i class="fa fa-calendar"></i>
+                <input placeholder="Age" name="age" type="text" autocomplete="off" [(ngModel)]="age"
+                #agecontrol="ngModel" minlength="2" maxlength="2" required>
+            </div>
+            <div *ngIf="agecontrol.invalid && (agecontrol.dirty || agecontrol.touched)" class="alert alert-danger"
+            style="text-align: justify; background-color: lightyellow; color: black">
+                <div *ngIf="agecontrol.errors.required">Age is required.</div>
+                <div *ngIf="agecontrol.errors.minlength">Age must be less than 100</div>
+            </div>
+
+            <div class="textbox">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <input placeholder="Phone" name="phone" type="text" autocomplete="off" [(ngModel)]="phone"
+                #phonecontrol="ngModel" minlength="10" maxlength="10" required>
+            </div>
+            <div *ngIf="phonecontrol.invalid && (phonecontrol.dirty || phonecontrol.touched)" class="alert alert-danger"
+            style="text-align: justify; background-color: lightyellow; color: black">
+                <div *ngIf="phonecontrol.errors.required">Phone No is required.</div>
+                <div *ngIf="phonecontrol.errors.minlength">Phone No must be of 10 digits.</div>
+            </div>
+
+            <div class="textbox">
+                <i class="fa fa-building"></i>
+                <input placeholder="Designation" name="des" type="text" autocomplete="off" [(ngModel)]="des"
+                #descontrol="ngModel" required>
+            </div>
+            <div *ngIf="descontrol.invalid && (descontrol.dirty || descontrol.touched)" class="alert alert-danger"
+            style="text-align: justify; background-color: lightyellow; color: black">
+                <div *ngIf="descontrol.errors.required">Designation is required.</div>
+            </div>
+
+            <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input placeholder="User Name" name="user" type="text" autocomplete="off" [(ngModel)]="user"
+                #usercontrol="ngModel" minlength="6" required>
+            </div>
+            <div *ngIf="usercontrol.invalid && (usercontrol.dirty || usercontrol.touched)" class="alert alert-danger"
+            style="text-align: justify; background-color: lightyellow; color: black">
+                <div *ngIf="usercontrol.errors.required">Username is required.</div>
+                <div *ngIf="usercontrol.errors.minlength">Username must be of atleast 6 or more characters.</div>
+            </div>
+
+            <div class="textbox">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <input placeholder="Password" name="pass" type="password" [(ngModel)]="pass"
+                #passcontrol="ngModel" pattern="(?=.*\d)(?=.*[A-Z]).{8,}" required>
+            </div>
+            <div *ngIf="passcontrol.invalid && (passcontrol.dirty || passcontrol.touched)" class="alert alert-danger"
+            style="text-align: justify; background-color: lightyellow; color: black">
+                <div *ngIf="passcontrol.errors.required">Password is required.</div>
+                <div *ngIf="passcontrol.errors.pattern"> Must contain at least one number, one uppercase character and at least 8 or more 
+                characters.</div>
+            </div>
+
+            <button class="btn" type="button" style="color: black; font-family: baufra; font-weight: bold">Sign Up</button>
+
+            <div class="foot">
+                <a routerLinkActive="active" routerLink="/signin" style="color: red">Already Member? Click Here</a>
+            </div>
+
+        </div>
+
+    </form>
+
+  </div>
+</div>

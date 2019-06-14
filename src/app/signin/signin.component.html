@@ -1,0 +1,45 @@
+<div class="bg-image" >
+  <div class="container-fluid">
+
+    <form name="signin">
+
+      <div class="login-box">
+
+          <h1>SIGN IN</h1>
+      
+          <div class="textbox">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <input placeholder="User Name" name="user" type="text" [(ngModel)]="user" autocomplete="off"
+              #usercontrol="ngModel" minlength="6" required>
+          </div>
+          <div *ngIf="usercontrol.invalid && (usercontrol.dirty || usercontrol.touched)" class="alert alert-danger"
+          style="text-align: justify; background-color: lightyellow; color: black">
+              <div *ngIf="usercontrol.errors.required">Username is required.</div>
+              <div *ngIf="usercontrol.errors.minlength">Username must be of atleast 6 or more characters.</div>
+          </div>
+
+          <div class="textbox">
+              <i class="fa fa-lock" aria-hidden="true"></i>
+              <input placeholder="Password" name="pass" type="password" [(ngModel)]="pass"
+              #passcontrol="ngModel" pattern="(?=.*\d)(?=.*[A-Z]).{8,}" required>
+          </div>
+          <div *ngIf="passcontrol.invalid && (passcontrol.dirty || passcontrol.touched)" class="alert alert-danger"
+          style="text-align: justify; background-color: lightyellow; color: black">
+              <div *ngIf="passcontrol.errors.required">Password is required.</div>
+              <div *ngIf="passcontrol.errors.pattern"> Must contain at least one number, one uppercase character and at least 8 or more 
+              characters.</div>
+          </div>
+
+          <button class="btn" type="button" style="color: black; font-family: baufra; font-weight: bold">Sign In</button>
+
+          <div class="foot">
+              <a routerLinkActive="active" routerLink="/signup" style="color: red">Don't have an Account? Click Here</a>
+          </div>
+
+
+      </div>
+
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,87 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+.bg-image
+{
+    background: url('../../assets/images/limg9.jpg') no-repeat;
+    height: 753px;
+    background-size: cover;
+}
+.login-box
+{
+    position: absolute;
+    color: white;
+    top: 37%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+}
+.login-box h1
+{
+    color: brown;
+    border-bottom: 4px solid brown;
+    font-size: 40px;
+    margin-bottom: 50px;
+    padding: 13px 0;
+    float: left;
+}
+.textbox
+{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    margin: 8px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid brown;
+    box-shadow: 0 5px 10px rgba(0,0,0,1);
+}
+.textbox input
+{
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 18px;
+    width: 80%;
+    margin: 0 10px;
+    float: left;
+}
+.btn
+{
+    width: 100%;
+    font-size: 18px;
+    background: none;
+    border: 1.5px solid black;
+    padding: 5px;
+    margin: 12px 0;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,1);
+}
+.btn:hover
+{
+    background-color: green;
+    border: 1.5px solid green;
+    transition-duration: 0.4s;
+}
+.textbox i
+{
+    margin-top: 3.5px;
+    width: 26px;
+    float: left;
+    text-align: center;
+    color: black;
+}
+.foot
+{
+    text-align: center;
+    margin: 10px 0;
+}
+a:link, a:hover
+{
+    text-decoration: none;
+}
+.login-box ::placeholder, input
+{
+    color: black;
+    font-weight: bold;
+    font-family: 'baufra';
+}

@@ -3,17 +3,17 @@
   <div class="menu">
 
   <div class="field">
-    <input type="text" name="name" required class="input" placeholder="Your Name" [(ngModel)]="Name" #Name="ngModel"]>
+    <input type="text" name="name" required class="input" placeholder="Your Name">
   </div>
 
 
   <div class="field">
-    <input type="text" name="email" class="input" placeholder="Your Email" [(ngModel)]="email" #email="ngModel">
+    <input type="text" name="email" class="input" placeholder="Your Email" >
   </div>
 
 
   <div class="field">
-    <textarea class="textarea" name="message" placeholder="What is your suggestion?" [(ngModel)]="message" #message="ngModel"></textarea>
+    <textarea class="textarea" name="message" placeholder="What is your suggestion?"></textarea>
   </div>
 
   <button type="button" (click) ="processForm()" class="btn">Submit</button>

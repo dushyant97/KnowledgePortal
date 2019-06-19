@@ -15,6 +15,7 @@ import { AboutComponent } from './about/about.component';
 import { DiscussionForumComponent } from './discussion-forum/discussion-forum.component';
 import { SuggestionComponent } from './suggestion/suggestion.component';
 
+
 const appRoutes: Routes = [
   {
     path: '',

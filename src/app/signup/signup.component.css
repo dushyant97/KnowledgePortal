@@ -1,16 +1,16 @@
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 .bg-image
 {
-    background: url('../../assets/images/limg9.jpg') no-repeat;
-    height: 753px;
+    background: url('../../assets/images/limg3.jpg') no-repeat;
+    height: 900px;
     background-size: cover;
 }
 .login-box
 {
     position: absolute;
     color: white;
-    top: 50%;
-    left: 20%;
+    top: 40%;
+    left: 80%;
     transform: translate(-50%,-50%);
     width: 250px;
 }

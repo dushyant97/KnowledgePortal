@@ -1,12 +1,12 @@
-<div class="bg-image"> 
+<div class="bg-image">
     <div class="container-fluid">
-  
+
         <form name="signup">
-        
+
         <div class="login-box">
-        
-            <h1>SIGN UP</h1>           
-            
+
+            <h1>SIGN UP</h1>
+
             <div class="textbox">
                 <i class="fa fa-user" aria-hidden="true"></i>
                 <input placeholder="First Name" name="fname" type="text" autocomplete="off" [(ngModel)]="fname"
@@ -14,8 +14,8 @@
             </div>
             <div *ngIf="fnamecontrol.invalid && (fnamecontrol.dirty || fnamecontrol.touched)" class="alert alert-danger"
             style="text-align: justify; background-color: lightyellow; color: black">
-                <div *ngIf="fnamecontrol.errors.required">First Name is required.</div>
-            </div>  
+                <div *ngIf="fnamecontrol.errors">First Name is required.</div>
+            </div>
 
             <div class="textbox">
                 <i class="fa fa-user" aria-hidden="true"></i>
@@ -24,8 +24,8 @@
             </div>
             <div *ngIf="lnamecontrol.invalid && (lnamecontrol.dirty || lnamecontrol.touched)" class="alert alert-danger"
             style="text-align: justify; background-color: lightyellow; color: black">
-                <div *ngIf="lnamecontrol.errors.required">Last Name is required.</div>
-            </div> 
+                <div *ngIf="lnamecontrol.errors">Last Name is required.</div>
+            </div>
 
             <div class="textbox">
                 <i class="fa fa-calendar"></i>
@@ -78,7 +78,7 @@
             <div *ngIf="passcontrol.invalid && (passcontrol.dirty || passcontrol.touched)" class="alert alert-danger"
             style="text-align: justify; background-color: lightyellow; color: black">
                 <div *ngIf="passcontrol.errors.required">Password is required.</div>
-                <div *ngIf="passcontrol.errors.pattern"> Must contain at least one number, one uppercase character and at least 8 or more 
+                <div *ngIf="passcontrol.errors.pattern"> Must contain at least one number, one uppercase character and at least 8 or more
                 characters.</div>
             </div>
 

@@ -1,19 +1,19 @@
-<form name="sb">  
-  
+<form name="sb">
+
   <div class="menu">
 
   <div class="field">
-    <input type="text" name="name" class="input" placeholder="Your Name">
+    <input type="text" name="name" required class="input" placeholder="Your Name" [(ngModel)]="Name" #Name="ngModel"]>
   </div>
 
-  
+
   <div class="field">
-    <input type="text" name="email" class="input" placeholder="Your Email">
+    <input type="text" name="email" class="input" placeholder="Your Email" [(ngModel)]="email" #email="ngModel">
   </div>
 
-  
+
   <div class="field">
-    <textarea class="textarea" name="message" placeholder="What is your suggestion?"></textarea>
+    <textarea class="textarea" name="message" placeholder="What is your suggestion?" [(ngModel)]="message" #message="ngModel"></textarea>
   </div>
 
   <button type="button" (click) ="processForm()" class="btn">Submit</button>

@@ -13,6 +13,7 @@ import { NewsComponent } from './news/news.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { DiscussionForumComponent } from './discussion-forum/discussion-forum.component';
+import { SuggestionComponent } from './suggestion/suggestion.component';
 
 const appRoutes: Routes = [
   {
@@ -57,7 +58,8 @@ const appRoutes: Routes = [
     NewsComponent,
     ContactComponent,
     AboutComponent,
-    DiscussionForumComponent
+    DiscussionForumComponent,
+    SuggestionComponent
   ],
   imports: [
     BrowserModule,

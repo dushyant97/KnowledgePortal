@@ -1,11 +1,60 @@
 h2{
     font-family: Arial, Helvetica, sans-serif;
-};
-
-.card-title{
-   text-align: center;
 }
 
-.container{
-    padding-top: 10px;
+.bg-image
+{
+    background: url('../../assets/images/discussion4.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+.bg-imagess{
+    background-color: lightskyblue;
+}
+
+.container-fluid
+{
+   /* background: rgba(255, 249, 249, 0.5); /* Black w/opacity/see-through */
+
+    background: rgba(0,0,0,0.5);
+    color: black;
+	border: 1px solid rgb(58, 58, 55);
+    width: 1300px;
+    height: auto;
+    border-radius: 10px;
+    left:10px;
+}
+
+.title
+{
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.card
+{
+    font-family: 'Archivo', sans-serif;
+    margin-bottom: 40px;
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.342);
+    opacity: 0.8;
+    text-align: center;
+}
+
+.input-table
+{
+    width: 1000px;
+    text-align: center;
+}
+
+.card-title
+{
+    background-color: rgba(248, 129, 99, 0.781);
+}
+
+h1
+{
+    font-family: 'Archivo', sans-serif;
+    font-size: 50px;
 }

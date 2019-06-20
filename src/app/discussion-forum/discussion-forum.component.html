@@ -1,5 +1,64 @@
-<div class="container"  style="padding-top: 3%">
-  <div class="card card-body">
-    <h2 class="card-title" style="text-align: center">Discussion Forum</h2>
+<div class="bg-image">
+<br>
+<br>
+  <div class="container-fluid">
+    <br>
+    <div class ="title"><h1>Discussion Forum</h1></div>
+    <br><br>
+    <div *ngIf="condition">
+      
+      <div class="card">
+        <div class="card-title" style="background-color:  rgba(60, 221, 54, 0.767);">
+              <h4>Create New Post</h4>
+        </div>
+        <div class="card-body">
+          <table class="input-table">
+            <td>
+              <label>Title:&nbsp;&nbsp;</label>
+              <input placeholder="Enter the title" type="text">
+            </td>
+            <td>
+              <label>Content:&nbsp;&nbsp;</label>
+              <input placeholder="Enter the content" type="text">
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary" style="position: absolute;">Create a thread</button>
+            </td>
+          </table>
+        </div>
+      </div>
+
+      <div class="card" *ngFor= "let item of obj">
+        <div class="card-title">
+          <h4>{{item.title}}</h4>
+        </div>
+        <div class = "card-body">
+           {{item.description}}
+        </div>
+      </div>
+
+  </div>
+
+  <div *ngIf="!condition">
+      <div class="card">
+          <div class="card-body">
+            <h4 style="text-align: center"> Details</h4>
+            <br>
+            <table class="input-table">
+              <tr><td>
+                <label>Title:&nbsp;&nbsp;</label>
+                <input placeholder="Enter the title" type="text">
+              </td>
+              </tr>
+              <td>
+              <tr>
+                <td>
+                <label>Content:&nbsp;&nbsp;</label>
+                <input placeholder="Enter the content" type="text">
+              </td>
+            </tr>
+            </table>
+          </div>
+        </div>
   </div>
 </div>

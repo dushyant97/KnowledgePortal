@@ -7,10 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
 
+  user:string = "";
+  pass:string = "";
+
   constructor() { }
 
   ngOnInit() {
     
+  }
+  mysubmit()
+  {
+    if(this.user == '' && this.pass == '')
+    {
+      alert("Username & Password Required");
+    }
+    else if(this.user == '')
+    {
+      alert("Username Required");
+    }
+    else if(this.pass == '')
+    {
+      alert("Password Required");
+    }
+    else
+    {
+      
+    }
   }
 
 }

@@ -1,52 +1,46 @@
 .bg-image
 {
     background-color: lightskyblue;
-    width: 100%;
 }
 .heading
 {
-    font-size: 340%; 
+    font-size: 60px; 
     text-align: center;
     font-family: 'Baufra';
-    padding-top: 3%;
-    float: right;
-    padding-right: 24%;
     color: brown;
+    line-height:126px;
 }
 #emblum
-{
-    width: 100px;
-    height: 120px;
-    padding-left: 10%;
+{   
+    width:100px;
+    height: 140px;
 }
 #cris
 {
     width: 200px;
     height: 140px;
-    padding-right: 0%;
     opacity: 2.5;
 }
 .row-1
 {
-    padding-top: 2%;
+    padding-top: 15px;
 }
 .row-2
 {
-    padding-top: 2%;
+    padding-top: 40px;
 }
 .nav-bar
 {
     background-color: black;
-    width: 100%;
 }
 .nav-bar a
 {
-    float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 15px 116.5px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 26px;
+    padding: 15px 107.75px;
+    float: left;
 }
 .nav-bar a:hover 
 {

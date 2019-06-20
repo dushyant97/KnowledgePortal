@@ -1,33 +1,14 @@
 .bg-image
 {
     background-color: lightskyblue;
-    width: 100%;
-}
-.heading
-{
-    font-size: 340%; 
-    text-align: center;
-    font-family: 'Baufra';
-    padding-top: 3%;
-    float: right;
-    padding-right: 24%;
-    color: brown;
 }
 .row-3
 {
-    padding-top: 4%;
-    padding-left: 5%;
-}
-.slide
-{
-    max-width: 1400px;
-    position: relative;
-    margin: auto;
+    padding-top: 50px;
+    text-align: center;
 }
 .fade
 {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 4s;
     animation-name: fade;
     animation-duration: 4s;
 }
@@ -36,18 +17,12 @@
     from {opacity: .4}
     to {opacity: 1}
 }
-@-webkit-keyframes fade
-{
-    from {opacity: .4}
-    to {opacity: 1}
-}
 .text
 {
-    color: #f2f2f2;
+    color: white;
     font-size: 12px;
-    padding: 8px 12px;
+    padding: 8px 115px;
     position: absolute;
-    top: 0;
 }
 .dot
 {
@@ -63,88 +38,34 @@
 {
     background-color: white;
 }
-.myslide
+#image1, #image2, #image3, #image4 
 {
-    display: none;
-}
-#image1
-{
-    vertical-align: middle;
-    height: 500px;
-    width: 1300px;
-}
-#image2
-{
-    vertical-align: middle;
-    height: 500px;
-    width: 1300px;
-}
-#image3
-{
-    vertical-align: middle;
-    height: 500px;
-    width: 1300px;
-}
-#image4
-{
-    vertical-align: middle;
     height: 500px;
     width: 1300px;
 }
 .row-4
 {
-    padding-top: 2%;
+    padding-top: 40px;
 }
-.card1
+.card1, .card2, .card3
 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 500px;
     margin: auto;
     font-family: 'Baufra';
-    padding-top: 2%;
+    padding-top: 10px;
     text-align: justify;
     background-color: white; 
 }
-.card1:hover
-{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
-}
-.card2
-{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 500px;
-    margin: auto;
-    margin-top: 0% !important;
-    font-family: 'Baufra';
-    padding-top: 2%;
-    text-align: justify;
-    background-color: white; 
-}
-.card2:hover
-{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
-}
-.card3
-{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 500px;
-    margin: auto;
-    margin-top: 0% !important;
-    font-family: 'Baufra';
-    padding-top: 2%;
-    text-align: justify;
-    background-color: white; 
-}
-.card3:hover
+.card1:hover, .card2:hover, .card3:hover
 {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
 }
 #image5
 {
     height: 300px;
-    padding-left: 15%;
+    padding-left: 65px;
 }
-#imaage6
+#image6
 {
-     height: 400px;
+     height: 300px;
 }

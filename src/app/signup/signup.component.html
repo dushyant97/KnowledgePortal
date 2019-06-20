@@ -1,29 +1,40 @@
 <div class="bg-image">
     <div class="container-fluid">
 
-        <form name="signup">
+        <form>
+        <div class="row">
+            <div class="col-md-2 offset-md-8">
 
+                   First Name is required.
+            </div>
+            <div class="col-md-2">
+
+                    <div class="textbox">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <input placeholder="First Name"
+                            name="fname" 
+                            type="text" 
+                            autocomplete="off" 
+                            [(ngModel)]="sg.firstName"
+                            #firstNamecontrol="ngModel" 
+                            required>
+                        </div>
+            </div>
+        </div>
         <div class="login-box">
         
             <h1>SIGN UP</h1>           
 
-            <div class="textbox">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <input placeholder="First Name" name="fname" type="text" 
-                autocomplete="off" [(ngModel)]="sg.firstName"
-                #firstNamecontrol="ngModel" required>
-            </div>
-            <div *ngIf="firstNamecontrol.invalid && (firstNamecontrol.dirty || firstNamecontrol.touched)"
-            class="alert alert-danger"
-            style="text-align: justify; background-color: lightyellow; color: black">
-                <div *ngIf="firstNamecontrol.errors.required">First Name is required.</div>
-            </div>  
 
             <div class="textbox">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input placeholder="Last Name" name="lname" type="text"
-                autocomplete="off" [(ngModel)]="sg.lastName"
-                #lastNamecontrol="ngModel" required>
+                <input placeholder="Last Name" 
+                name="lname" 
+                type="text"
+                autocomplete="off" 
+                [(ngModel)]="sg.lastName"
+                #lastNamecontrol="ngModel" 
+                required>
             </div>
             <div *ngIf="lastNamecontrol.invalid && (lastNamecontrol.dirty || lastNamecontrol.touched)"
             class="alert alert-danger"
@@ -33,9 +44,15 @@
 
             <div class="textbox">
                 <i class="fa fa-calendar"></i>
-                <input placeholder="Age" name="age" type="text"
-                autocomplete="off" [(ngModel)]="sg.age"
-                #agecontrol="ngModel" minlength="2" maxlength="2" required>
+                <input placeholder="Age" 
+                name="age" 
+                type="text"
+                autocomplete="off" 
+                [(ngModel)]="sg.age"
+                #agecontrol="ngModel" 
+                minlength="2" 
+                maxlength="2" 
+                required>
             </div>
             <div *ngIf="agecontrol.invalid && (agecontrol.dirty || agecontrol.touched)"
             class="alert alert-danger"
@@ -46,9 +63,15 @@
 
             <div class="textbox">
                 <i class="fa fa-phone" aria-hidden="true"></i>
-                <input placeholder="Phone" name="phone" type="text"
-                autocomplete="off" [(ngModel)]="sg.phone"
-                #phonecontrol="ngModel" minlength="10" maxlength="10" required>
+                <input placeholder="Phone" 
+                name="phone" 
+                type="text"
+                autocomplete="off" 
+                [(ngModel)]="sg.phone"
+                #phonecontrol="ngModel" 
+                minlength="10" 
+                maxlength="10" 
+                required>
             </div>
             <div *ngIf="phonecontrol.invalid && (phonecontrol.dirty || phonecontrol.touched)"
             class="alert alert-danger"
@@ -59,10 +82,13 @@
 
             <div class="textbox">
                 <i class="fa fa-building"></i>
-                <input placeholder="Designation" name="des" type="text"
+                <input placeholder="Designation" 
+                name="des" 
+                type="text"
                 autocomplete="off" 
                 [(ngModel)]="sg.designation"
-                #designationcontrol="ngModel" required>
+                #designationcontrol="ngModel" 
+                required>
             </div>
             <div *ngIf="designationcontrol.invalid && (designationcontrol.dirty || designationcontrol.touched)"
             class="alert alert-danger"
@@ -72,9 +98,14 @@
 
             <div class="textbox">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input placeholder="User Name" name="user" type="text"
-                autocomplete="off" [(ngModel)]="sg.username"
-                #usernamecontrol="ngModel" minlength="6" required>
+                <input placeholder="User Name" 
+                name="user" 
+                type="text"
+                autocomplete="off" 
+                [(ngModel)]="sg.username"
+                #usernamecontrol="ngModel" 
+                minlength="6" 
+                required>
             </div>
             <div *ngIf="usernamecontrol.invalid && (usernamecontrol.dirty || usernamecontrol.touched)"
             class="alert alert-danger"
@@ -85,8 +116,13 @@
 
             <div class="textbox">
                 <i class="fa fa-lock" aria-hidden="true"></i>
-                <input placeholder="Password" name="pass" type="password" [(ngModel)]="sg.password"
-                #passwordcontrol="ngModel" pattern="(?=.*\d)(?=.*[A-Z]).{8,}" required>
+                <input placeholder="Password" 
+                name="pass" 
+                type="password" 
+                [(ngModel)]="sg.password"
+                #passwordcontrol="ngModel" 
+                pattern="(?=.*\d)(?=.*[A-Z]).{8,}" 
+                required>
             </div>
             <div *ngIf="passwordcontrol.invalid && (passwordcontrol.dirty || passwordcontrol.touched)"
             class="alert alert-danger"
@@ -96,12 +132,17 @@
                 characters.</div>
             </div>
 
-            <button class="btn" (click)=submit() routerLinkActive="active" routerLink="/signin"
+            <button class="btn" 
+            (click)=submit() 
+            routerLinkActive="active" 
+            routerLink="/signin"
             type="submit"
             style="color: black; font-family: baufra; font-weight: bold">Sign Up</button>
 
             <div class="foot">
-                <a routerLinkActive="active" routerLink="/signin" style="color: red">Already Member? Click Here</a>
+                <a routerLinkActive="active" 
+                routerLink="/signin" 
+                 style="color: red">Already Member? Click Here</a>
             </div>
 
         </div>

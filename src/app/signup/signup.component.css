@@ -3,51 +3,56 @@
 {
     background: url('../../assets/images/limg3.jpg') no-repeat center;
     height: 100%;
-    width: 100%;
     background-size: cover;
 }
-.login-box
+.row
 {
-    left: 100%;
-    width: 250px;
+    padding-top: 60px;
 }
-.login-box h1
+.login h1
 {
     color: brown;
-    border-bottom: 4px solid brown;
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 50px;
-    padding: 13px 0;
-    float: left;
+    text-align: center;
+    width: 250px;
 }
 .textbox
 {
-    width: 100%;
-    overflow: hidden;
+    width: 250px;
     font-size: 20px;
-    margin: 8px 0;
+    margin: 15px 0;
     padding: 10px 0;
     border-bottom: 1px solid brown;
     box-shadow: 0 5px 10px rgba(0,0,0,1);
+    border-radius: 2px;
 }
 .textbox input
 {
     border: none;
     background: none;
-    outline: none;
-    font-size: 18px;
-    width: 80%;
-    margin: 0 10px;
-    float: left;
+    font-size: 20px;
+}
+.textbox i
+{
+    width: 26px;
+    text-align: center;
+    color: black;
+}
+.textbox ::placeholder
+{
+    color: black;
+    font-weight: bold;
+    font-family: 'baufra';
 }
 .btn
 {
-    width: 100%;
-    font-size: 18px;
+    width: 250px;
+    font-size: 20px;
     background: none;
     border: 1.5px solid black;
     padding: 5px;
-    margin: 12px 0;
+    margin: 15px 0;
     cursor: pointer;
     transition-duration: 0.4s;
     border-radius: 12px;
@@ -59,26 +64,9 @@
     border: 1.5px solid green;
     transition-duration: 0.4s;
 }
-.textbox i
-{
-    margin-top: 3.5px;
-    width: 26px;
-    float: left;
-    text-align: center;
-    color: black;
-}
 .foot
 {
+    width: 250px;
     text-align: center;
-    margin: 10px 0;
-}
-a:link, a:hover
-{
-    text-decoration: none;
-}
-.login-box ::placeholder, input
-{
-    color: black;
-    font-weight: bold;
-    font-family: 'baufra';
+    margin-bottom: 50px; 
 }

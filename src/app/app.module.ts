@@ -15,12 +15,13 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { DiscussionForumComponent } from './discussion-forum/discussion-forum.component';
 import { SuggestionComponent } from './suggestion/suggestion.component';
+import { ThreadComponent } from './thread/thread.component';
 
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: DiscussionForumComponent
   },
   {
     path: 'home',
@@ -45,6 +46,14 @@ const appRoutes: Routes = [
   {
     path: 'signin',
     component: SigninComponent
+  },
+  {
+    path: 'thread',
+    component: ThreadComponent
+  },
+  {
+    path: 'forum',
+    component: DiscussionForumComponent
   }
 ];
 
@@ -61,7 +70,8 @@ const appRoutes: Routes = [
     ContactComponent,
     AboutComponent,
     DiscussionForumComponent,
-    SuggestionComponent
+    SuggestionComponent,
+    ThreadComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,111 @@
+<div class="container-fluid">
+
+  <br>
+  <br>
+  
+  <div class="sub-container col-xl-10  col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-10 offset-sm-1 col-10 offset-1">
+    
+    <br>  
+    
+    <div class ="row">
+      
+      <div class ="title col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-8 offset-2">
+        
+        <h1>Thread Details</h1>
+   
+        <button class="btn btn-primary" routerLink="/forum">Discussion Forum</button>
+      
+      </div>
+    
+      </div>
+      
+    <br><br>
+          
+      <div class = "row">
+
+        <div class="col">
+          
+          <div class = "card creator">
+
+            <div class="card-title" style="background-color:  rgba(60, 221, 54, 0.767)">
+
+              <h4>Automatic Identification and Data Capture (AIDC) and Radio Frequency Identification</h4>
+
+            </div>
+
+            <div class="card-body">
+          
+                Automatic Identification and Data Capture (AIDC) and Radio Frequency Identification
+
+              <div class = "row">
+
+                <div class="col">
+ 
+                  <label>Owner: Dushyant</label>
+
+                </div>
+
+              </div>
+              
+            </div>
+              
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class = "row">
+
+        <div class ="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+          <div class="card" style="text-align: center">
+          
+            <div class="card-title">
+          
+              <h4>Responses</h4>
+          
+            </div>
+            
+            <div class = "card-body">
+              
+              <div class="table-responsive-sm ">
+
+                  <table class="table table-hover">
+                      
+                    <thead>
+                       
+                      <tr>
+                          
+                        <th scope="col">#</th>
+                        <th scope="col">User</th>
+                        <th scope="col">Description</th>
+
+                      </tr>
+                      
+                    </thead>
+                      
+                    <tbody *ngFor= "let item of obj">
+                        
+                      <tr>
+                          
+                        <th scope="row">{{item.threadNo}}</th>
+                        <td>{{item.owner}}</td>
+                        <td>{{item.description}}</td>
+                        
+                      </tr>        
+                      
+                    </tbody>
+                    
+                  </table>
+
+              </div>
+          
+            </div>
+          
+          </div>
+        
+        </div>
+      
+      </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-signin',
@@ -10,10 +11,16 @@ export class SigninComponent implements OnInit {
   user:string = "";
   pass:string = "";
 
-  constructor() { }
+  constructor(private http : HttpClient) { }
+
+  obj : Object; 
+  url : string = 'http://localhost:3000/api/Employees';
+  
 
   ngOnInit() {
-    
+    this.http.get(this.url).subscribe((res)=>{
+      this.obj=res as any;  
+    });
   }
   mysubmit()
   {

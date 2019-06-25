@@ -1,7 +1,11 @@
-.container-fluid
+.fluid
 {
-    background: url('../../assets/images/discussion4.jpg');
-    background-size: cover;
+    background: linear-gradient(
+    to bottom,
+    rgba(20, 217, 252, 0.795),
+    rgba(0,0,0, 100)
+  ),url('../../assets/images/discussion4.jpg');
+   background-size: cover;
     background-position: center; 
 }
 

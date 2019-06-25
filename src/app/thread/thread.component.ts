@@ -12,11 +12,12 @@ export class ThreadComponent implements OnInit {
 
   obj : Object; 
   url : string = 'http://localhost:3000/api/DiscussionForums';
-  
+
 
   ngOnInit() {
     this.http.get(this.url).subscribe((res)=>{
       this.obj=res as any; 
+     
     });
   }
 

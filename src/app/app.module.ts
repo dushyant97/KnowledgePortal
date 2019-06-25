@@ -21,7 +21,7 @@ import { ThreadComponent } from './thread/thread.component';
 const appRoutes: Routes = [
   {
     path: '',
-    component: DiscussionForumComponent
+    component: HomeComponent
   },
   {
     path: 'home',

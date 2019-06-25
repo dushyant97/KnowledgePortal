@@ -13,32 +13,42 @@ export class SigninComponent implements OnInit {
 
   constructor(private http : HttpClient) { }
 
-  obj : Object; 
+  obj : Object;
   url : string = 'http://localhost:3000/api/Employees';
   
 
   ngOnInit() {
     this.http.get(this.url).subscribe((res)=>{
       this.obj=res as any;  
+
     });
   }
   mysubmit()
   {
-    if(this.user == '' && this.pass == '')
+    var x = document.forms["signin"]["user"].value;
+    var y = document.forms["signin"]["pass"].value;
+    var length= Object.keys(this.obj).length;
+    var id;
+    for(let i=0;i<length;i++)
     {
-      alert("Username & Password Required");
+      if(Object.values(this.obj)[i].username == x)
+      {
+        id=i;
+      }
     }
-    else if(this.user == '')
+    console.log(typeof(id))
+    if(x == "" || x != Object.values(this.obj)[id].username)
     {
-      alert("Username Required");
+      alert("incorrect username");
     }
-    else if(this.pass == '')
+    else if( y == "" || y != Object.values(this.obj)[id].password)
     {
-      alert("Password Required");
+      alert("incorrect password");
     }
-    else
-    {
-      
+    else{
+      alert("Credentials Matched");
+      sessionStorage.setItem("sessions",id);
+      window.location.href="/forum";
     }
   }
 

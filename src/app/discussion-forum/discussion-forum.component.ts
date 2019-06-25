@@ -16,7 +16,9 @@ export class DiscussionForumComponent implements OnInit {
   condition : boolean = true;
   obj : Object; 
   url : string = 'http://localhost:3000/api/DiscussionForums';
-  
+  id : string = sessionStorage.getItem("sessions");
+  /*user = Object.values(this.obj)[this.id].username;
+*/
 
   ngOnInit() {
     this.http.get(this.url).subscribe((res)=>{
@@ -36,8 +38,9 @@ posted_details(){
   }).subscribe((res)=>{});
 }
 
-thread_no(){
-  
+invoke(title){
+
+  console.log(title);
 }
 
 };

@@ -48,3 +48,10 @@ a
 {
     background-color: lightskyblue;
 }
+@media only screen and (max-width: 600px)
+{
+    .heading
+    {
+        font-size: 30px;
+    }
+}

@@ -1,72 +1,46 @@
-@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-.bg-image
-{
-    background: url('../../assets/images/limg3.jpg') no-repeat center;
-    height: 100%;
-    background-size: cover;
-}
-.row
+.row1
 {
     padding-top: 60px;
+    padding-bottom: 60px;
+    background: url('../../assets/images/3.png') no-repeat center;
+    background-size: cover;
 }
-.login h1
+.bg
 {
-    color: brown;
-    font-size: 50px;
-    margin-bottom: 50px;
-    text-align: center;
-    width: 250px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 20px;
+    padding-bottom: 30px;
 }
-.textbox
+h1
 {
-    width: 250px;
-    font-size: 20px;
-    margin: 15px 0;
-    padding: 10px 0;
-    border-bottom: 1px solid brown;
-    box-shadow: 0 5px 10px rgba(0,0,0,1);
-    border-radius: 2px;
-}
-.textbox input
-{
-    border: none;
-    background: none;
-    font-size: 20px;
-}
-.textbox i
-{
-    width: 26px;
-    text-align: center;
-    color: black;
-}
-.textbox ::placeholder
-{
-    color: black;
-    font-weight: bold;
     font-family: 'baufra';
+    font-size: 60px;
+    text-align: center;
+    border-bottom: 4px solid white;
+    color: white;
 }
-.btn
+input
 {
-    width: 250px;
-    font-size: 20px;
-    background: none;
-    border: 1.5px solid black;
-    padding: 5px;
-    margin: 15px 0;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    border-radius: 12px;
-    box-shadow: 0 5px 10px rgba(0,0,0,1);
+    background:rgba(255, 255, 255, 0.5);
 }
-.btn:hover
+input::placeholder
 {
-    background-color: green;
-    border: 1.5px solid green;
-    transition-duration: 0.4s;
+    color: black;
+    font-family: 'baufra';
+    font-size: 16px;
+}
+.menu
+{   
+    color: white;
+    font-family: 'baufra';
+    font-size: 22px;
+}
+.submit_btn
+{
+    font-family: 'baufra';
 }
 .foot
 {
-    width: 250px;
     text-align: center;
-    margin-bottom: 50px; 
+    padding-top: 10px;
 }

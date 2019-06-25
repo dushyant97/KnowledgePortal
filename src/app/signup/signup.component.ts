@@ -16,15 +16,6 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
   }
 
-
-  submit()
-  {
-    this.http.post('http://localhost:3000/api/Employees', this.sg, {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    }).subscribe((res)=>{});
-  }
  }
 
 

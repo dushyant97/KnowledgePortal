@@ -1,47 +1,44 @@
-<div class="bg-image" >
-  <div class="container-fluid">
+<div class="row row1">
 
-    <form name="signin">
+    <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-10 offset-1 bg">
 
-      <div class="login-box">
+        <h1>SIGN IN</h1>
+        <br>
 
-          <h1>SIGN IN</h1>
-      
-          <div class="textbox">
-              <i class="fa fa-user" aria-hidden="true"></i>
-              <input placeholder="User Name" 
-              name="user" 
-              type="text" 
-              [(ngModel)]="user" 
-              autocomplete="off"
-              minlength="6" 
-              required>
-          </div>
+        <form class="was-validated">
 
-          <div class="textbox">
-              <i class="fa fa-lock" aria-hidden="true"></i>
-              <input placeholder="Password" 
-              name="pass" 
-              type="password" 
-              [(ngModel)]="pass"
-              pattern="(?=.*\d)(?=.*[A-Z]).{8,}" 
-              required>
-          </div>
-
-          <button class="btn" 
-          type="button" 
-          (click)="mysubmit()"
-          style="color: black; font-family: baufra; font-weight: bold">Sign In</button>
-
-          <div class="foot">
-              <a routerLinkActive="active" routerLink="/signup" style="color: red">Don't have an Account? Click Here</a>
-              
+            <div class="form-group">
+                <label class="menu">Username:</label>
+                <input type="text" class="form-control" placeholder="Enter username" name="user" autocomplete="off" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
             </div>
 
+            <div class="form-group">
+                <label class="menu">Password:</label>
+                <input type="password" class="form-control" placeholder="Enter password" name="pass" autocomplete="off" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
 
-      </div>
+            <div class ="row">
 
-    </form>
+                <div class ="col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-12">
 
-  </div>
+                    <button  type="submit" class="btn btn-primary btn-lg btn-block submit_btn">Submit</button>
+
+                    <div class="foot">
+                        <a routerLinkActive="active" 
+                        routerLink="/signup" 
+                        style="color: red">Don't have an account? Click Here</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
 </div>

@@ -31,7 +31,7 @@ export class SigninComponent implements OnInit {
     }
     else
     {
-      
+      window.location.href = "/signup";
     }
   }
 

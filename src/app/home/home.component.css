@@ -5,40 +5,8 @@
 .row-3
 {
     padding-top: 50px;
-    text-align: center;
 }
-.fade
-{
-    animation-name: fade;
-    animation-duration: 4s;
-}
-@keyframes fade
-{
-    from {opacity: .4}
-    to {opacity: 1}
-}
-.text
-{
-    color: white;
-    font-size: 12px;
-    padding: 8px 115px;
-    position: absolute;
-}
-.dot
-{
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: darkblue;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s white !important;
-}
-.active
-{
-    background-color: white;
-}
-#image1, #image2, #image3, #image4 
+.img 
 {
     height: 500px;
     width: 1300px;
@@ -47,7 +15,7 @@
 {
     padding-top: 40px;
 }
-.card1, .card2, .card3
+.cards
 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: auto;
@@ -63,7 +31,8 @@
 #image5
 {
     height: 300px;
-    padding-left: 65px;
+    width: 300px;
+    padding-left: 70px;
 }
 #image6
 {

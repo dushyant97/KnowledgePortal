@@ -5,7 +5,7 @@
         <h1>SIGN IN</h1>
         <br>
 
-        <form class="was-validated">
+        <form class="was-validated" name="signin">
 
             <div class="form-group">
                 <label class="menu">Username:</label>
@@ -19,13 +19,14 @@
                 <input type="password" class="form-control" placeholder="Enter password" name="pass" autocomplete="off" required>
                 <div class="valid-feedback">Valid.</div>
                 <div class="invalid-feedback">Please fill out this field.</div>
+                <div *ngIf = "condition">Incorrect password. Try again!!</div>
             </div>
 
             <div class ="row">
 
                 <div class ="col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-12">
 
-                    <button  type="submit" class="btn btn-primary btn-lg btn-block submit_btn">Submit</button>
+                    <button  type="submit" (click)="mysubmit()" class="btn btn-primary btn-lg btn-block submit_btn">Submit</button>
 
                     <div class="foot">
                         <a routerLinkActive="active" 

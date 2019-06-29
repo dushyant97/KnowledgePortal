@@ -1,4 +1,11 @@
-<div class="fluid">
+<div class="row bg">
+
+  <div *ngIf="success" class="alert success">
+  
+    <span class="closebtn" (click)="closebtn()">&times;</span>  
+     Post Submitted Successfully.
+  
+  </div>
 
   <br>
   <br>
@@ -11,102 +18,102 @@
       
       <div class ="title col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-8 offset-2">
         
+  
         <h1>Discussion Forum</h1>
       
       </div>
-   
+  
     </div>
     
     <br><br>
     
-    <div> <!--ngif condition-->
-      
-      <div class = "row">
+    <div class = "row">
 
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
           
-          <div class = "card creator">
+        <div class = "card creator">
 
-            <div class="card-title" style="background-color:  rgba(60, 221, 54, 0.767)">
+          <div class="card-title" style="background-color:  rgba(60, 221, 54, 0.767)">
 
-              <h4>Create New Post</h4>
+            <h4>Create New Post</h4>
 
-            </div>
+          </div>
 
-            <div class="card-body">
+          <div class="card-body">
+              
+            <div class = "row">
+
+              <div class = "col">
+
+                <label>Title:&nbsp;&nbsp;</label>
+                <input placeholder="Enter the title" name="title" type="text" [(ngModel)]="obj1.title" required>      
+              
+              </div>
+
+              <div class = "col" style="padding-top: 10px">
                 
-              <div class = "row">
-
-                <div class = "col">
-
-                    <label>Title:&nbsp;&nbsp;</label>
-                    <input placeholder="Enter the title" type="text">      
+                <div class = "row">
+                  
+                  <div class = "col-xl-3 col-lg-3 col-sm-3 col-3">
+                    
+                    <label>Content:&nbsp;&nbsp;</label>
+                  
+                  </div>
+                  
+                  <div class = "col-xl-9 col-lg-9 col-sm-9 col-9 ">
+                  
+                    <textarea class="form-control" rows="5" id="comment" name="description" [(ngModel)]="obj1.description" required></textarea>
                 
                   </div>
-
-                <div class = "col" style="padding-top: 10px">
                   
-                  <div class = "row">
-                    
-                    <div class = "col-xl-3 col-lg-3 col-sm-3 col-3">
-                      
-                      <label>Content:&nbsp;&nbsp;</label>
-                    
-                    </div>
-                    
-                    <div class = "col-xl-9 col-lg-9 col-sm-9 col-9 ">
-                    
-                      <textarea class="form-control" rows="5" id="comment"></textarea>
-                  
-                    </div>
-                    
-                  </div>
-                
                 </div>
-                
-                <div class = "col submitbtn">
+              
+              </div>
+              
+              <div class = "col submitbtn">
 
-                    <button type="button" class="btn btn-primary">
-                     
-                      Create a thread
+                  <button type="button" class="btn btn-primary" (click)="posted_details()">
+                    
+                    Create a thread
 
-                    </button>      
-
-                </div>
+                  </button>      
 
               </div>
 
             </div>
-              
+
           </div>
-
-        </div>
-      </div>
-
-      <div class = "row">
-
-        <div class ="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-
-          <div class="card display" *ngFor= "let item of obj">
-          
-            <div class="card-title">
-          
-              <a routerLink = "/thread" ng-click="invoke(item.title)" ><h4>{{item.title}}</h4></a>
-          
-            </div>
             
-            <div class = "card-body">
-              
-              {{item.description}}
+        </div>
+
+      </div>
+    </div>
+
+    <div class = "row">
+
+      <div class ="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+        <div class="card display" *ngFor= "let item of obj">
+        
+          <div class="card-title">
+        
+            <a [routerLink] = "['/thread',item.title,item.description]"><h4>{{item.title}}</h4></a>
+        
+          </div>
           
-            </div>
-          
+          <div class = "card-body">
+            
+            {{item.description}}
+        
           </div>
         
         </div>
       
       </div>
+    
+    </div>
 
   </div>
 
 </div>
+

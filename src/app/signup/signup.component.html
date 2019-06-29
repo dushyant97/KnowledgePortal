@@ -9,49 +9,49 @@
 
             <div class="form-group">
                 <label class="menu">First Name:</label>
-                <input type="text" class="form-control" placeholder="Enter first name" name="fname" autocomplete="off" required>
+                <input type="text" class="form-control" placeholder="Enter first name" name="fname" autocomplete="off" [(ngModel)]="sg.firstName" required>
                 <div class="valid-feedback">Valid.</div>
                 <div class="invalid-feedback">Please fill out this field.</div>
             </div>
 
             <div class="form-group">
                 <label class="menu">Last Name:</label>
-                <input type="text" class="form-control" placeholder="Enter last name" name="lname" autocomplete="off" required>
+                <input type="text" class="form-control" placeholder="Enter last name" name="lname" autocomplete="off" [(ngModel)]="sg.lastName" required>
                 <div class="valid-feedback">Valid.</div>
                 <div class="invalid-feedback">Please fill out this field.</div>
             </div>
 
             <div class="form-group">
                 <label class="menu">Age:</label>
-                <input type="text" class="form-control" placeholder="Enter your age" name="age" autocomplete="off" required>
+                <input type="text" class="form-control" placeholder="Enter your age" name="age" autocomplete="off" [(ngModel)]="sg.age" required>
                 <div class="valid-feedback">Valid.</div>
                 <div class="invalid-feedback">Please fill out this field.</div>
             </div>
 
             <div class="form-group">
                 <label class="menu">Phone:</label>
-                <input type="text" class="form-control" placeholder="Enter your phone no" name="phone" autocomplete="off" required>
+                <input type="text" class="form-control" placeholder="Enter your phone no" name="phone" autocomplete="off" [(ngModel)]="sg.phone" required>
                 <div class="valid-feedback">Valid.</div>
                 <div class="invalid-feedback">Please fill out this field.</div>
             </div>
 
             <div class="form-group">
                 <label class="menu">Designation:</label>
-                <input type="text" class="form-control" placeholder="Enter your designation" name="des" autocomplete="off" required>
+                <input type="text" class="form-control" placeholder="Enter your designation" name="des" autocomplete="off" [(ngModel)]="sg.designation" required>
                 <div class="valid-feedback">Valid.</div>
                 <div class="invalid-feedback">Please fill out this field.</div>
             </div>
 
             <div class="form-group">
                 <label class="menu">Username:</label>
-                <input type="text" class="form-control" placeholder="Enter username" name="user" autocomplete="off" required>
+                <input type="text" class="form-control" placeholder="Enter username" name="user" autocomplete="off" [(ngModel)]="sg.username" required>
                 <div class="valid-feedback">Valid.</div>
                 <div class="invalid-feedback">Please fill out this field.</div>
             </div>
 
             <div class="form-group">
                 <label class="menu">Password:</label>
-                <input type="password" class="form-control" placeholder="Enter password" name="pass" autocomplete="off" required>
+                <input type="password" class="form-control" placeholder="Enter password" name="pass" autocomplete="off" [(ngModel)]="sg.password" required>
                 <div class="valid-feedback">Valid.</div>
                 <div class="invalid-feedback">Please fill out this field.</div>
             </div>
@@ -60,7 +60,7 @@
 
                 <div class ="col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-12">
 
-                    <button  type="submit" class="btn btn-primary btn-lg btn-block submit_btn">Submit</button>
+                    <button  type="submit" (click)="posted_details()" class="btn btn-primary btn-lg btn-block submit_btn">Submit</button>
 
                     <div class="foot">
                         <a routerLinkActive="active" 

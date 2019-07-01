@@ -1,3 +1,11 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+i
+{
+    text-align: center;
+    color: white;
+    margin-right: 10px;
+    padding-top: 5px;
+}
 .row1
 {
     padding-top: 60px;
@@ -33,7 +41,7 @@ input::placeholder
 {   
     color: white;
     font-family: 'baufra';
-    font-size: 22px;
+    font-size: 25px;
 }
 .submit_btn
 {

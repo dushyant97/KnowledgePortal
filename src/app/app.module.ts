@@ -16,12 +16,13 @@ import { AboutComponent } from './about/about.component';
 import { DiscussionForumComponent } from './discussion-forum/discussion-forum.component';
 import { SuggestionComponent } from './suggestion/suggestion.component';
 import { ThreadComponent } from './thread/thread.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: DiscussionForumComponent
+    component: HomeComponent
   },
   {
     path: 'home',
@@ -54,6 +55,10 @@ const appRoutes: Routes = [
   {
     path: 'forum',
     component: DiscussionForumComponent
+  },
+  {
+    path: 'welcome',
+    component: WelcomeComponent
   }
 ];
 
@@ -71,7 +76,8 @@ const appRoutes: Routes = [
     AboutComponent,
     DiscussionForumComponent,
     SuggestionComponent,
-    ThreadComponent
+    ThreadComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

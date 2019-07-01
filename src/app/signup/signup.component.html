@@ -5,71 +5,159 @@
         <h1>SIGN UP</h1>
         <br>
 
-        <form class="was-validated">
+        <form name="signup" class="was-validated">
 
             <div class="form-group">
+                <i class="fa fa-user fa-2x" aria-hidden="true"></i>
                 <label class="menu">First Name:</label>
-                <input type="text" class="form-control" placeholder="Enter first name" name="fname" autocomplete="off" [(ngModel)]="sg.firstName" required>
+                <input type="text" 
+                class="form-control" 
+                placeholder="Enter first name" 
+                name="fname" 
+                autocomplete="off"
+                [(ngModel)]="sg.firstName"
+                #firstNamecontrol="ngModel" 
+                required>
                 <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                <div *ngIf="firstNamecontrol.invalid && (firstNamecontrol.dirty || firstNamecontrol.touched)">
+                    <div style="color: red" *ngIf="firstNamecontrol.errors.required">First Name required.</div> 
+                </div>
             </div>
 
             <div class="form-group">
+                <i class="fa fa-user fa-2x" aria-hidden="true"></i>
                 <label class="menu">Last Name:</label>
-                <input type="text" class="form-control" placeholder="Enter last name" name="lname" autocomplete="off" [(ngModel)]="sg.lastName" required>
+                <input type="text" 
+                class="form-control" 
+                placeholder="Enter last name" 
+                name="lname" 
+                autocomplete="off" 
+                [(ngModel)]="sg.lastName"
+                #lastNamecontrol="ngModel" 
+                required>
                 <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                <div *ngIf="lastNamecontrol.invalid && (lastNamecontrol.dirty || lastNamecontrol.touched)">
+                    <div style="color: red" *ngIf="lastNamecontrol.errors.required">Last Name required.</div>
+                </div>
             </div>
 
             <div class="form-group">
+                <i class="fa fa-calendar fa-2x"></i>
                 <label class="menu">Age:</label>
-                <input type="text" class="form-control" placeholder="Enter your age" name="age" autocomplete="off" [(ngModel)]="sg.age" required>
+                <input type="text" 
+                class="form-control" 
+                placeholder="Enter your age" 
+                name="age" 
+                autocomplete="off"
+                minlength="2"                  
+                maxlength="2"  
+                [(ngModel)]="sg.age"
+                #agecontrol="ngModel" 
+                required>
                 <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                <div *ngIf="agecontrol.invalid && (agecontrol.dirty || agecontrol.touched)">
+                    <div style="color: red" *ngIf="agecontrol.errors.required">Age is required.</div>
+                    <div style="color: red" *ngIf="agecontrol.errors.minlength">Age must be less than 100.</div>
+                </div>  
             </div>
 
             <div class="form-group">
+                <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
                 <label class="menu">Phone:</label>
-                <input type="text" class="form-control" placeholder="Enter your phone no" name="phone" autocomplete="off" [(ngModel)]="sg.phone" required>
+                <input type="text" 
+                class="form-control" 
+                placeholder="Enter your phone no" 
+                name="phone" 
+                autocomplete="off" 
+                minlength="10" 
+                maxlength="10" 
+                [(ngModel)]="sg.phone"
+                #phonecontrol="ngModel" 
+                required>
                 <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                <div *ngIf="phonecontrol.invalid && (phonecontrol.dirty || phonecontrol.touched)">
+                    <div style="color: red" *ngIf="phonecontrol.errors.required">Phone No is required.</div>
+                    <div style="color: red" *ngIf="phonecontrol.errors.minlength">Phone No must be of 10 digits.</div>
+                </div>    
             </div>
 
             <div class="form-group">
+                <i class="fa fa-building fa-2x"></i>
                 <label class="menu">Designation:</label>
-                <input type="text" class="form-control" placeholder="Enter your designation" name="des" autocomplete="off" [(ngModel)]="sg.designation" required>
+                <input type="text" 
+                class="form-control" 
+                placeholder="Enter your designation" 
+                name="des" 
+                autocomplete="off" 
+                [(ngModel)]="sg.designation"
+                #designationcontrol="ngModel" 
+                required>
                 <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                <div *ngIf="designationcontrol.invalid && (designationcontrol.dirty || designationcontrol.touched)">
+                    <div style="color: red" *ngIf="designationcontrol.errors.required">Designation is required.</div>
+                </div>
             </div>
 
             <div class="form-group">
+                <i class="fa fa-user fa-2x" aria-hidden="true"></i>
                 <label class="menu">Username:</label>
-                <input type="text" class="form-control" placeholder="Enter username" name="user" autocomplete="off" [(ngModel)]="sg.username" required>
+                <input type="text" 
+                class="form-control" 
+                placeholder="Enter username" 
+                name="user" 
+                autocomplete="off" 
+                minlength="6"
+                [(ngModel)]="sg.username"
+                #usernamecontrol="ngModel" 
+                required>
                 <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                <div *ngIf="usernamecontrol.invalid && (usernamecontrol.dirty || usernamecontrol.touched)">
+                    <div style="color: red" *ngIf="usernamecontrol.errors.required">Username is required.</div>
+                    <div style="color: red" *ngIf="usernamecontrol.errors.minlength">Username must be of atleast 6 or more characters.</div>
+                </div>
             </div>
 
             <div class="form-group">
+                <i class="fa fa-lock fa-2x" aria-hidden="true"></i>
                 <label class="menu">Password:</label>
-                <input type="password" class="form-control" placeholder="Enter password" name="pass" autocomplete="off" [(ngModel)]="sg.password" required>
+                <input type="password" 
+                class="form-control" 
+                placeholder="Enter password" 
+                name="pass"
+                minlength="8" 
+                [(ngModel)]="sg.password"
+                #passwordcontrol="ngModel" 
+                pattern="(?=.*\d)(?=.*[A-Z]).{8,}" 
+                required>
                 <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                <div *ngIf="passwordcontrol.invalid && (passwordcontrol.dirty || passwordcontrol.touched)">
+                    <div style="color: red" *ngIf="passwordcontrol.errors.required">Password is required.</div>
+                    <div style="color: red" *ngIf="passwordcontrol.errors.pattern">Must contain at least one number, one uppercase character and at least 8 or more characters.</div>
+                </div>
             </div>
 
             <div class ="row">
 
                 <div class ="col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-12">
 
-                    <button  type="submit" (click)="posted_details()" class="btn btn-primary btn-lg btn-block submit_btn">Submit</button>
+                    <button  type="submit" (click)="mysubmit()" class="btn btn-primary btn-lg btn-block submit_btn">Submit</button>
 
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-12">
+    
                     <div class="foot">
                         <a routerLinkActive="active" 
                         routerLink="/signin" 
                         style="color: red">Already Member? Click Here</a>
                     </div>
-
+                    
                 </div>
-
+    
             </div>
 
         </form>

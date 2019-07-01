@@ -50,7 +50,7 @@ export class SigninComponent implements OnInit {
     }
     else{
       sessionStorage.setItem("sessions",id+1);
-      this.router.navigate(['/forum']);
+      this.router.navigate(['/welcome']);
     }
   }
 

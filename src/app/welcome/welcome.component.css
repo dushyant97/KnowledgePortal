@@ -1,11 +1,19 @@
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
+<<<<<<< HEAD
 .row-main
 {
     background: url('../../assets/images/wel.jpg') no-repeat center;
     background-size: cover;
     height: 433px;
 }
+=======
+.bg
+{
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+>>>>>>> 060c30b53c253536694b43ed5b572d960c707c1f
 .row1
 {
     padding-top: 100px;

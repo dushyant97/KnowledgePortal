@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Signup } from '../../model/signup';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -9,11 +10,25 @@ import { Signup } from '../../model/signup';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+
+  constructor(private http: HttpClient,  private router: Router) { }
 
   sg=<Signup>{};
+  url : string = 'http://localhost:3000/api/Employees';
 
   ngOnInit() {
+  }
+
+  onsubmit(){
+    alert(this.sg.firstName)
+  }
+
+  posted_details(){
+    this.http.post(this.url, this.sg, {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    }).subscribe((res)=>{});
+    this.router.navigate(['/signin']);  
+  
   }
 
   mysubmit()
@@ -33,16 +48,14 @@ export class SignupComponent implements OnInit {
     }
     else
     {
-      this.http.post('http://localhost:3000/api/Employees', this.sg, {
-        headers: new HttpHeaders({
-          'Content-Type': 'application/json'
-        })
-      }).subscribe((res)=>{});
-      window.location.href = "/signin";
+      this.http.post(this.url, this.sg, {
+        headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+        }).subscribe((res)=>{});
+        this.router.navigate(['/signin']); 
     }
 
   }
 
- }
+}
 
 

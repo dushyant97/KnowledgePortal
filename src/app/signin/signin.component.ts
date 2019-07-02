@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -8,7 +9,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SigninComponent implements OnInit {
 
-  constructor(private http : HttpClient) { }
+  user:string = "";
+  pass:string = "";
+
+
+  constructor(private http : HttpClient, private router: Router) { }
+
+  obj : Object;
+  url : string = 'http://localhost:3000/api/Employees';
+
 
   ngOnInit() {
     
@@ -19,14 +28,25 @@ export class SigninComponent implements OnInit {
     
     var x = document.forms["signin"]["user"].value;
     var y = document.forms["signin"]["pass"].value;
+    var length= Object.keys(this.obj).length;
+    var id;
 
-    if(x.length < 6 || y.length < 8)
+    for(let i=0;i<length;i++)
+    {
+      if(Object.values(this.obj)[i].username == x)
+      {
+        id=i;
+      }
+    }
+  
+    if(x == "" || x != Object.values(this.obj)[id].username)
     {
       alert("Invalid Entry!! Please fill the Form.");
     }
     else
     {
-      window.location.href = "/welcome";
+      sessionStorage.setItem("sessions",id+1);
+      this.router.navigate(['/welcome']);
     }
 
   }

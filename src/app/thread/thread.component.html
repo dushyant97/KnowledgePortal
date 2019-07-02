@@ -1,8 +1,15 @@
-<div class="container-fluid">
+<div class="row bg">
 
   <br>
   <br>
   
+  <div *ngIf="success" class="alert success">
+  
+    <span class="closebtn" (click)="closebtn()">&times;</span>  
+     Post Submitted Successfully.
+  
+  </div>
+
   <div class="sub-container col-xl-10  col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-10 offset-sm-1 col-10 offset-1">
     
     <br>  
@@ -29,19 +36,19 @@
 
             <div class="card-title" style="background-color:  rgba(60, 221, 54, 0.767)">
 
-              <h4>Automatic Identification and Data Capture (AIDC) and Radio Frequency Identification</h4>
+              <h4>{{title}}</h4>
 
             </div>
 
             <div class="card-body">
           
-                Automatic Identification and Data Capture (AIDC) and Radio Frequency Identification
+                {{desc}}
 
               <div class = "row">
 
-                <div class="col">
+                <div class="offset-xl-9 offset-lg-9 offset-md-8 offset-sm-10">
  
-                  <label>Owner: {{name}}</label>
+                  <label>Created By: {{name}}</label>
 
                 </div>
 
@@ -69,7 +76,7 @@
             
             <div class = "card-body">
               
-              <div class="table-responsive-sm ">
+              <div *ngIf="condition" class="table-responsive-sm ">
 
                   <table class="table table-hover">
                       
@@ -89,8 +96,8 @@
                         
                       <tr>
                           
-                        <th scope="row">{{item.threadNo}}</th>
-                        <td>{{item.owner}}</td>
+                        <th scope="row">{{item.id}}</th>
+                        <td>{{item.user}}</td>
                         <td>{{item.description}}</td>
                         
                       </tr>        
@@ -100,7 +107,28 @@
                   </table>
 
               </div>
-          
+              
+              <div class="row reply-text" *ngIf="!condition">
+
+                <div class="col-xl-12 col-lg-12 col-12 col-sm-12 col-md-12">
+
+                  No Responses are available. Be the first one to reply
+
+                </div>
+
+              </div>
+
+              <div class="row">
+
+                <div class="col-xl-12 col-lg-12 col-12 col-sm-12 col-md-12">
+
+                  <textarea class="form-control" rows="5" id="replys" name="Responses" placeholder="Enter your reply" [(ngModel)]="obj3.description" required></textarea>
+                  <button type="button" class="btn btn-primary btn-lg btn-block responsebtn" (click)="response()">Reply</button>
+
+                </div>
+
+              </div>
+
             </div>
           
           </div>

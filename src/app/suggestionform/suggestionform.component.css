@@ -1,0 +1,62 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+i
+{
+    color: black;    
+}
+
+h3{
+  margin-top:15px;  
+  font-size: 40px;    
+  text-align: center;
+  color: #0062cc;
+  margin-bottom:30px;
+}
+
+.bg{
+   background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
+}
+
+.sub-container
+{
+    background: rgba(255,255,255,0.45);
+  border: 1px solid rgb(58, 58, 55);
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom:50px;
+}
+
+#rockets{
+  border-radius: 6rem;
+  width:150px;
+  transform: rotate(29deg);
+  margin-top: 50px;
+}
+
+.form-control{
+  border-radius:1rem;
+}
+ 
+.submitbtn {
+  border: none;
+  border-radius: 1rem;
+  padding: 10px;
+  background: #dc3545;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#suggest::placeholder{
+
+}
+
+@media only screen and (max-width: 426px)
+{
+
+  #rockets{
+    width:110px;;
+  }
+
+}  

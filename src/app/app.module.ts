@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,8 @@ import { AboutComponent } from './about/about.component';
 import { DiscussionForumComponent } from './discussion-forum/discussion-forum.component';
 import { SuggestionComponent } from './suggestion/suggestion.component';
 import { ThreadComponent } from './thread/thread.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { UploadComponent } from './upload/upload.component';
 
 
 const appRoutes: Routes = [
@@ -54,6 +56,18 @@ const appRoutes: Routes = [
   {
     path: 'forum',
     component: DiscussionForumComponent
+  },
+  {
+    path: 'suggestion',
+    component: SuggestionComponent
+  },
+  {
+    path: 'welcome',
+    component: WelcomeComponent
+  },
+  {
+    path: 'upload',
+    component: UploadComponent
   }
 ];
 
@@ -71,7 +85,9 @@ const appRoutes: Routes = [
     AboutComponent,
     DiscussionForumComponent,
     SuggestionComponent,
-    ThreadComponent
+    ThreadComponent,
+    WelcomeComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,

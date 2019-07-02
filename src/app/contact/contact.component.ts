@@ -12,4 +12,23 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
+  mysubmit()
+  {
+
+    var x = document.forms["contact"]["name"].value;
+    var y = document.forms["contact"]["email"].value;
+    var z = document.forms["contact"]["comments"].value;
+
+    if(x == "" || y == "" || z == "")
+    {
+      alert("Please fill the Form.");
+    }
+    else
+    {
+      alert("Thank You, We will contact you within 24 hours.")
+      window.location.href = "/contact";
+    }
+
+  }
+
 }

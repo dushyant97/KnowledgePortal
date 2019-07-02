@@ -1,0 +1,29 @@
+.row-main
+{
+    background: url('../../assets/images/about.jpg') no-repeat center;
+    background-size: cover;
+}
+.row1
+{
+    padding-top: 40px;
+    margin-left: 10px;
+}
+h1
+{
+    font-family: 'baufra';
+    font-size: 70px;
+}
+.row2
+{
+    padding-top: 30px;
+    margin-left: 10px;
+    padding-bottom: 40px;
+    padding-right: 10px;
+}
+p
+{
+    font-family: 'baufra';
+    font-size: 20px;
+    color: black;
+    text-align: justify;
+}

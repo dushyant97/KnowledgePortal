@@ -1,0 +1,15 @@
+.row-main
+{
+    background: lightskyblue;
+}
+.row1
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+h1
+{
+    font-family: 'baufra';
+    font-size: 50px;
+    text-align: center;
+}

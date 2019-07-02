@@ -1,3 +1,85 @@
-<p>
-  contact works!
-</p>
+<div class="row row-main">
+
+    <div class="col-12">
+
+        <div class="row row1">
+
+            <div class="offset-2 col-8">
+
+                <div class="contact-form">
+
+                    <h1>Contact Us</h1>
+                    <br>
+
+                    <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"></i>Chanakya Puri, New Delhi, India</p>
+        
+                    <p class="card-text"><i class="fa fa-phone" aria-hidden="true"></i>011-24104525</p>
+                
+                    <p class="card-text"><i class="fa fa-envelope" aria-hidden="true"></i>adhikari.devendra@cris.org.in</p>
+
+                    <form name="contact" class="was-validated">
+
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" 
+                            name="name" 
+                            placeholder="Enter your full name" 
+                            class="form-control" 
+                            [(ngModel)]="username"
+                            #usernamecontrol="ngModel"
+                            autocomplete="off"
+                            required>
+                            <div class="valid-feedback">Valid.</div>
+                                <div *ngIf="usernamecontrol.invalid && (usernamecontrol.dirty || usernamecontrol.touched)">
+                                    <div style="color: red" *ngIf="usernamecontrol.errors.required">Name is required.</div>
+                                </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" 
+                            name="email" 
+                            placeholder="Enter your email" 
+                            class="form-control"
+                            [(ngModel)]="email"
+                            #emailcontrol="ngModel"
+                            autocomplete="off"
+                            required>
+                            <div class="valid-feedback">Valid.</div>
+                                <div *ngIf="emailcontrol.invalid && (emailcontrol.dirty || emailcontrol.touched)">
+                                    <div style="color: red" *ngIf="emailcontrol.errors.required">Email is required.</div>
+                                </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="comments" 
+                            placeholder="Give your comments" 
+                            rows="7" 
+                            class="form-control"
+                            [(ngModel)]="comment"
+                            #commentcontrol="ngModel"
+                            autocomplete="off"
+                            maxlength="255"
+                            required></textarea>
+                            <div class="valid-feedback">Valid.</div>
+                                <div *ngIf="commentcontrol.invalid && (commentcontrol.dirty || commentcontrol.touched)">
+                                    <div style="color: red" *ngIf="commentcontrol.errors.required">Comments required.</div>
+                                </div>
+                        </div>
+
+                        <div class="form-group">
+                        <button type="button" (click)="mysubmit()" class="btn btn-primary btn-block text">Send</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

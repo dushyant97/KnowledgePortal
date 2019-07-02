@@ -1,0 +1,32 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+.row-main
+{
+    background: url('../../assets/images/wel.jpg') no-repeat center;
+    background-size: cover;
+    height: 433px;
+}
+.row1
+{
+    padding-top: 100px;
+}
+h1
+{
+    text-align: center;
+    font-family: 'baufra';
+    font-size: 75px;    
+}
+.row2
+{
+    padding-top: 20px;
+}
+.main
+{
+    text-align: center;
+}
+.menu
+{
+    font-size: 20px;
+    font-family: 'baufra';
+    border-radius: 10px;
+}

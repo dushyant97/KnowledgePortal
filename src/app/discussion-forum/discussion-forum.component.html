@@ -46,7 +46,7 @@
               <div class = "col">
 
                 <label>Title:&nbsp;&nbsp;</label>
-                <input placeholder="Enter the title" name="title" type="text" [(ngModel)]="obj1.title" required>      
+                <input placeholder="Enter the title" id ="title" name="title" type="text" [(ngModel)]="obj1.title" required>      
               
               </div>
 
@@ -97,7 +97,7 @@
         
           <div class="card-title">
         
-            <a [routerLink] = "['/thread',item.title,item.description]"><h4>{{item.title}}</h4></a>
+            <a [routerLink] = "['/thread',item.title,item.description,item.threadNo,item.owner]"><h4>{{item.title}}</h4></a>
         
           </div>
           

@@ -1,6 +1,7 @@
 export class discussionforum
 {
-    title:string;
-    owner:string;
-    description:string;
+    threadNo: Number;
+    title: string;
+    owner: string;
+    description: string;
 };

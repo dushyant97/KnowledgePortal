@@ -47,13 +47,17 @@ closebtn()
 posted_details(){
 
   this.success=true;
+  document.documentElement.scrollTop = 0; 
   this.obj1.owner = this.obj2[0].firstName + this.obj2[0].lastName;
-  console.log(this.obj1);
+
   this.http.post(this.url, this.obj1, {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
   }).subscribe((res)=>{});
+  this.ngOnInit();
+  (<HTMLInputElement>document.getElementById('title')).value = "";
+  (<HTMLInputElement>document.getElementById('comment')).value = "";
 }
 
 };

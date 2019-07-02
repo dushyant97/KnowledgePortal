@@ -1,0 +1,86 @@
+<div class="row bg">
+ 
+  <div *ngIf="success" class="alert success">
+      <span class="closebtn" (click)="closebtn()">&times;</span>  
+     suggestion posted successfully
+  </div>
+ 
+  <br>
+  <br>
+  
+  <div class="sub-container col-xl-10  col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-10 offset-sm-1 col-10 offset-1">
+    <div class="row">
+      <div class="offset-xl-5 offset-lg-5 offset-md-5 offset-4 offset-sm-3">
+          <img id="rockets" class="img-responsive" src="../../assets/images/rocket.png"/>
+      </div>
+    </div>  
+    
+    <form method="post">
+      <h3>Drop Us a Message</h3>
+      <div class="row">
+        <div class="col">
+            <div class="form-group">
+            <input type="text" 
+            class="form-control" 
+            placeholder="Enter username" 
+            name="user" 
+            autocomplete="off" 
+            minlength="6"
+            [(ngModel)]="sg.username"
+            #usernamecontrol="ngModel" 
+            required>
+            <div class="valid-feedback">Valid.</div>
+            <div *ngIf="usernamecontrol.invalid && (usernamecontrol.dirty || usernamecontrol.touched)">
+                <div style="color: red" *ngIf="usernamecontrol.errors.required">Username is required.</div>
+                <div style="color: red" *ngIf="usernamecontrol.errors.minlength">Username must be of atleast 6 or more characters.</div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col">
+          <div class="form-group">
+          <input type="text" 
+          class="form-control" 
+          placeholder="Enter title" 
+          name="title" 
+          autocomplete="off" 
+          minlength="6"
+          [(ngModel)]="sg.username"
+          #usernamecontrol="ngModel" 
+          required>
+          <div class="valid-feedback">Valid.</div>
+          <div *ngIf="usernamecontrol.invalid && (usernamecontrol.dirty || usernamecontrol.touched)">
+              <div style="color: red" *ngIf="usernamecontrol.errors.required">Username is required.</div>
+              <div style="color: red" *ngIf="usernamecontrol.errors.minlength">Username must be of atleast 6 or more characters.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-12 col-sm-12 col-md-12">
+        <div class="form-group">
+          <textarea class="form-control" 
+          placeholder="Enter your Suggestion" 
+          id="suggest" 
+          name="suggestion" 
+          rows="5" 
+          [(ngModel)]="obj3.description" 
+          required></textarea> 
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="offset-2 col-8">
+          <button type="button" class="btn btn-primary btn-large btn-block submitbtn" (click)="response()">Submit</button>
+      </div>
+    </div>
+    
+
+    </form>
+    
+  </div>
+
+</div>
+

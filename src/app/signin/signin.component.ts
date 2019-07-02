@@ -21,6 +21,10 @@ export class SigninComponent implements OnInit {
 
   ngOnInit() {
     
+    this.http.get(this.url).subscribe((res)=>{
+      this.obj = res as any;
+    });
+
   }
 
   submit()
@@ -28,20 +32,29 @@ export class SigninComponent implements OnInit {
     
     var x = document.forms["signin"]["user"].value;
     var y = document.forms["signin"]["pass"].value;
+
     var length= Object.keys(this.obj).length;
-    var id;
+    var id = null;
 
     for(let i=0;i<length;i++)
     {
-      if(Object.values(this.obj)[i].username == x)
+      if(Object.values(this.obj)[i]['username'] == x)
       {
-        id=i;
+        id = i;
       }
     }
   
-    if(x == "" || x != Object.values(this.obj)[id].username)
+    if(x == "" && y == "")
     {
       alert("Invalid Entry!! Please fill the Form.");
+    }
+    else if(id == null)
+    {
+      alert("Inavalid username");
+    }
+    else if(y != Object.values(this.obj)[id]['password'])
+    {
+      alert("Invalid password");
     }
     else
     {

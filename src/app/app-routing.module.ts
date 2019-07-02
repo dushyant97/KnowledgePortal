@@ -10,6 +10,7 @@ import { ThreadComponent } from './thread/thread.component';
 import { DiscussionForumComponent } from './discussion-forum/discussion-forum.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { SuggestionformComponent } from './suggestionform/suggestionform.component';
+import { UploadComponent } from './upload/upload.component';
 
 
 const appRoutes: Routes = [
@@ -56,6 +57,10 @@ const appRoutes: Routes = [
   {
     path: 'suggestform',
     component: SuggestionformComponent
+  },
+  {
+    path: 'upload',
+    component: UploadComponent
   }
 ];
 

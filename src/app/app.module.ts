@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,7 @@ import { DiscussionForumComponent } from './discussion-forum/discussion-forum.co
 import { ThreadComponent } from './thread/thread.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { SuggestionformComponent } from './suggestionform/suggestionform.component';
+import { UploadComponent } from './upload/upload.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { SuggestionformComponent } from './suggestionform/suggestionform.compone
     DiscussionForumComponent,
     ThreadComponent,
     WelcomeComponent,
-    SuggestionformComponent
+    SuggestionformComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -26,7 +27,7 @@ export class ContactComponent implements OnInit {
     else
     {
       alert("Thank You, We will contact you within 24 hours.")
-      window.location.href = "/contact";
+      this.router.navigate(["/contact"])
     }
 
   }

@@ -25,13 +25,13 @@
                             name="name" 
                             placeholder="Enter your full name" 
                             class="form-control" 
-                            [(ngModel)]="username"
-                            #usernamecontrol="ngModel"
+                            [(ngModel)]="sg1.name"
+                            #namecontrol="ngModel"
                             autocomplete="off"
                             required>
                             <div class="valid-feedback">Valid.</div>
-                                <div *ngIf="usernamecontrol.invalid && (usernamecontrol.dirty || usernamecontrol.touched)">
-                                    <div style="color: red" *ngIf="usernamecontrol.errors.required">Name is required.</div>
+                                <div *ngIf="namecontrol.invalid && (namecontrol.dirty || namecontrol.touched)">
+                                    <div style="color: red" *ngIf="namecontrol.errors.required">Name is required.</div>
                                 </div>
                         </div>
 
@@ -41,7 +41,7 @@
                             name="email" 
                             placeholder="Enter your email" 
                             class="form-control"
-                            [(ngModel)]="email"
+                            [(ngModel)]="sg1.email"
                             #emailcontrol="ngModel"
                             autocomplete="off"
                             required>
@@ -57,14 +57,14 @@
                             placeholder="Give your comments" 
                             rows="7" 
                             class="form-control"
-                            [(ngModel)]="comment"
-                            #commentcontrol="ngModel"
+                            [(ngModel)]="sg1.message"
+                            #messagecontrol="ngModel"
                             autocomplete="off"
                             maxlength="255"
                             required></textarea>
                             <div class="valid-feedback">Valid.</div>
-                                <div *ngIf="commentcontrol.invalid && (commentcontrol.dirty || commentcontrol.touched)">
-                                    <div style="color: red" *ngIf="commentcontrol.errors.required">Comments required.</div>
+                                <div *ngIf="messagecontrol.invalid && (messagecontrol.dirty || messagecontrol.touched)">
+                                    <div style="color: red" *ngIf="messagecontrol.errors.required">Comments required.</div>
                                 </div>
                         </div>
 

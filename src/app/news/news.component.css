@@ -1,6 +1,6 @@
 .row-main
 {
-    background: lightskyblue;
+    background: rgb(203, 224, 236);
 }
 .row1
 {
@@ -10,6 +10,54 @@
 h1
 {
     font-family: 'baufra';
-    font-size: 50px;
+    font-size: 80px;
     text-align: center;
+}
+#demo
+{
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    padding: 10px;
+    font-family: 'baufra';
+    font-size: 20px;
+    text-align: center;
+    color: blue;
+}
+.column
+{
+    width: 25%;
+    padding: 0 10px;
+}
+.card 
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    padding: 16px;
+    background-color: white;
+    border-radius: 1.5em;
+}
+.row2
+{
+    padding-bottom: 40px;
+    margin: 10px;
+}
+p
+{
+    font-family: 'baufra';
+    font-size: 18px;
+}
+h3
+{
+    font-family: 'baufra';
+    font-size: 30px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+@media screen and (max-width: 600px)
+{
+    .column 
+    {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
 }

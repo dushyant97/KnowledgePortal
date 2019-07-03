@@ -46,18 +46,28 @@ closebtn()
   
 posted_details(){
 
-  this.success=true;
-  document.documentElement.scrollTop = 0; 
-  this.obj1.owner = this.obj2[0].firstName + this.obj2[0].lastName;
+  var x = document.forms["disscussion"]["title"].value;
+  var y = document.forms["disscussion"]["description"].value;
 
-  this.http.post(this.url, this.obj1, {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  }).subscribe((res)=>{});
-  this.ngOnInit();
-  (<HTMLInputElement>document.getElementById('title')).value = "";
-  (<HTMLInputElement>document.getElementById('comment')).value = "";
+  if(x == "" || y == "")
+  {
+    alert("Please fill the Form.");
+  }
+  else
+  {
+    this.success=true;
+    document.documentElement.scrollTop = 0; 
+    this.obj1.owner = this.obj2[0].firstName + this.obj2[0].lastName;
+    this.http.post(this.url, this.obj1, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }).subscribe((res)=>{});
+    (<HTMLInputElement>document.getElementById('title')).value = "";
+    (<HTMLInputElement>document.getElementById('comment')).value = "";
+    this.ngOnInit();
+  }
+
 }
 
 };

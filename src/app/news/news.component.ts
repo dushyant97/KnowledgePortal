@@ -10,6 +10,8 @@ export class NewsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    document.getElementById("demo").innerHTML = Date();
     
   }
 }

@@ -24,7 +24,7 @@ export class SigninComponent implements OnInit {
     this.http.get(this.url).subscribe((res)=>{
       this.obj = res as any;
     });
-
+    
   }
 
   submit()

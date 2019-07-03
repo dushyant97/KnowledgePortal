@@ -17,6 +17,7 @@ import { ThreadComponent } from './thread/thread.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { SuggestionformComponent } from './suggestionform/suggestionform.component';
 import { UploadComponent } from './upload/upload.component';
+import { ForumParameterService } from './forum-parameter.service';
 
 
 @NgModule({
@@ -43,7 +44,7 @@ import { UploadComponent } from './upload/upload.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ForumParameterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

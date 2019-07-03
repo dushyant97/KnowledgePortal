@@ -97,8 +97,11 @@
         
           <div class="card-title">
         
-            <a [routerLink] = "['/thread',item.title,item.description,item.threadNo,item.owner]"><h4>{{item.title}}</h4></a>
-        
+          <!--  <a [routerLink] = "['/thread',item.title,item.description,item.threadNo,item.owner]"><h4>{{item.title}}</h4></a>
+          -->
+          
+          <a routerLink='/thread' (click)="setvalue(item.title,item.description,item.threadNo,item.owner)"><h4>{{item.title}}</h4></a>
+          
           </div>
           
           <div class = "card-body">

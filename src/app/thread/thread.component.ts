@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ActivatedRoute} from '@angular/router';
 import { thread_details } from '../../model/thread';
+import { ForumParameterService } from '../forum-parameter.service';
 
  
 @Component({
@@ -11,7 +12,7 @@ import { thread_details } from '../../model/thread';
 })
 export class ThreadComponent implements OnInit {
 
-  constructor(private http : HttpClient, private route:ActivatedRoute) { }
+  constructor(private http : HttpClient, private route:ActivatedRoute, private service: ForumParameterService) { }
 
   obj : Object; 
   url : string = 'http://localhost:3000/api/ThreadDetails';
@@ -29,16 +30,25 @@ export class ThreadComponent implements OnInit {
   name : string = "";
 
   ngOnInit() {
-
-    // to get what was clicked passing via router 
-    this.route.params.subscribe(params=>{this.parameter = params});
-    this.title = this.parameter['id'];
-    this.desc = this.parameter['description'];
-    this.thread = this.parameter['threadNo'];
-    this.name = this.parameter['owner'];
-    this.url1 = 'http://localhost:3000/api/ThreadDetails' + '?filter={"where" : {"threadNo" : ' + this.thread +' }}';
+/*
+  // to get what was clicked passing via router 
+  this.route.params.subscribe(params=>{this.parameter = params});
+  this.title = this.parameter['id'];
+  this.desc = this.parameter['description'];
+  this.thread = this.parameter['threadNo'];
+  this.name = this.parameter['owner'];
     
-    //to print the table
+*/
+  document.documentElement.scrollTop = 0;
+
+  this.title = this.service.get_id();
+  this.desc = this.service.get_description();
+  this.thread = this.service.get_threadNo();
+  this.name = this.service.get_owner();
+  
+  this.url1 = 'http://localhost:3000/api/ThreadDetails' + '?filter={"where" : {"threadNo" : ' + this.thread +' }}';
+
+  //to print the table
     this.http.get(this.url1).subscribe((res)=>{
       this.obj=res as any;  
       if(this.obj['length']==0)
@@ -74,8 +84,8 @@ export class ThreadComponent implements OnInit {
       })
     }).subscribe((res)=>{});
     document.documentElement.scrollTop = 0;
-    this.ngOnInit();
     (<HTMLInputElement>document.getElementById('replys')).value = "";
+    this.ngOnInit();
   }
 
 }

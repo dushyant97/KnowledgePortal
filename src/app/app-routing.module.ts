@@ -43,7 +43,8 @@ const appRoutes: Routes = [
     component: SigninComponent
   },
   {
-    path: 'thread/:id/:description/:threadNo/:owner',
+   // path: 'thread/:id/:description/:threadNo/:owner',
+    path: 'thread',
     component: ThreadComponent
   },
   {

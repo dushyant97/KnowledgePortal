@@ -1,6 +1,5 @@
 .row-main
 {
-    /*background: rgb(203, 224, 236);*/
     background: url("../../assets/images/news.jpg") no-repeat center;
     background-size: cover;
 }
@@ -36,7 +35,7 @@ h1
     padding: 16px;
     background-color: white;
     border-radius: 1.5em;
-    min-height: 500px;
+    min-height: 440px;
 }
 .row2
 {
@@ -58,7 +57,7 @@ h3
     font-weight: bold;
     text-align: justify;
 }
-@media screen and (max-width: 600px)
+@media screen and (max-width: 800px)
 {
     .column 
     {

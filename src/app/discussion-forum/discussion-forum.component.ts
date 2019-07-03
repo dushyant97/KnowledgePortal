@@ -64,9 +64,7 @@ posted_details(){
           'Content-Type': 'application/json'
         })
       }).subscribe((res)=>{});
-      (<HTMLInputElement>document.getElementById('title')).value = "";
-      (<HTMLInputElement>document.getElementById('comment')).value = "";
-      this.ngOnInit();
+      window.location.href = "/forum";
     }
   }
 

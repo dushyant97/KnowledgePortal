@@ -1,8 +1,8 @@
 <div class="row bg">
  
-  <div *ngIf="success" class="alert success">
+  <div *ngIf="condition" class="alert success">
       <span class="closebtn" (click)="closebtn()">&times;</span>  
-     suggestion posted successfully
+     Suggestion Posted Successfully!!
   </div>
  
   <br>
@@ -15,7 +15,7 @@
       </div>
     </div>  
     
-    <form method="post">
+    <form method="post" name="sug">
       <h3>Drop Us a Message</h3>
       <div class="row">
         <div class="col">
@@ -26,7 +26,7 @@
             name="user" 
             autocomplete="off" 
             minlength="6"
-            [(ngModel)]="sg.username"
+            [(ngModel)]="obj1.username"
             #usernamecontrol="ngModel" 
             required>
             <div class="valid-feedback">Valid.</div>
@@ -45,7 +45,7 @@
           name="title" 
           autocomplete="off" 
           minlength="6"
-          [(ngModel)]="sg.username"
+          [(ngModel)]="obj1.title"
           #usernamecontrol="ngModel" 
           required>
           <div class="valid-feedback">Valid.</div>
@@ -65,7 +65,7 @@
           id="suggest" 
           name="suggestion" 
           rows="5" 
-          [(ngModel)]="obj3.description" 
+          [(ngModel)]="obj1.suggestion" 
           required></textarea> 
         </div>
       </div>
@@ -73,7 +73,7 @@
 
     <div class="row">
       <div class="offset-2 col-8">
-          <button type="button" class="btn btn-primary btn-large btn-block submitbtn" (click)="response()">Submit</button>
+          <button type="button" class="btn btn-primary btn-large btn-block submitbtn" (click)="mysubmit()">Submit</button>
       </div>
     </div>
     

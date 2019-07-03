@@ -84,8 +84,7 @@ export class ThreadComponent implements OnInit {
       })
     }).subscribe((res)=>{});
     document.documentElement.scrollTop = 0;
-    (<HTMLInputElement>document.getElementById('replys')).value = "";
-    this.ngOnInit();
+    window.location.href = "/thread";
   }
 
 }

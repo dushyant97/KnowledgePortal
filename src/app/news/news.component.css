@@ -34,6 +34,7 @@ h1
     padding: 16px;
     background-color: white;
     border-radius: 1.5em;
+    min-height: 440px;
 }
 .row2
 {
@@ -49,11 +50,13 @@ p
 h3
 {
     font-family: 'baufra';
-    font-size: 30px;
+    font-size: 25px;
     border-bottom: 2px solid black;
     padding-bottom: 10px;
+    font-weight: bold;
+    text-align: justify;
 }
-@media screen and (max-width: 600px)
+@media screen and (max-width: 800px)
 {
     .column 
     {

@@ -34,6 +34,7 @@ export class SignupComponent implements OnInit {
   mysubmit()
   {
 
+    var pattern = /(?=.*[A-Z])/;
     var a = document.forms["signup"]["fname"].value;
     var b = document.forms["signup"]["lname"].value;
     var c = document.forms["signup"]["age"].value;
@@ -42,7 +43,7 @@ export class SignupComponent implements OnInit {
     var f = document.forms["signup"]["user"].value;
     var g = document.forms["signup"]["pass"].value;
     
-    if(a == "" || b == "" || c.length < 2 || d.length < 10 || e == "" || f.length < 6 || g.length < 8)
+    if(a == "" || b == "" || c.length < 2 || d.length < 10 || e == "" || f.length < 6 || g.length < 8 || g.match(pattern))
     {
       alert("Invalid Entry!! Please fill the Form.");
     }

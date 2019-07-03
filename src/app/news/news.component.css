@@ -44,13 +44,14 @@ p
 {
     font-family: 'baufra';
     font-size: 18px;
+    text-align: justify;
 }
 h3
 {
     font-family: 'baufra';
     font-size: 30px;
-    text-align: center;
     border-bottom: 2px solid black;
+    padding-bottom: 10px;
 }
 @media screen and (max-width: 600px)
 {

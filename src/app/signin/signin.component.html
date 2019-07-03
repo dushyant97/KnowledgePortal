@@ -36,7 +36,7 @@
                 minlength="8"
                 [(ngModel)]="password"
                 #passwordcontrol="ngModel" 
-                pattern="(?=.*\d)(?=.*[A-Z]).{8,}" 
+                pattern="(?=.*\d)(?=.*[A-Z]).{8,}"  
                 required>
                 <div class="valid-feedback">Valid.</div>
                 <div *ngIf="passwordcontrol.invalid && (passwordcontrol.dirty || passwordcontrol.touched)">

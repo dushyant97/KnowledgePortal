@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-signin',
+  selector: 'app-signin',              
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.css']
 })
@@ -29,7 +29,7 @@ export class SigninComponent implements OnInit {
 
   submit()
   {
-    
+
     var x = document.forms["signin"]["user"].value;
     var y = document.forms["signin"]["pass"].value;
 

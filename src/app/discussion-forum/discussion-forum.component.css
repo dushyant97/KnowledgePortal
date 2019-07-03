@@ -26,7 +26,7 @@
     margin-bottom:50px;
 }
 
-.title
+.title1
 {
     font-weight: bold;
     text-align: center;
@@ -68,6 +68,11 @@ h1
 {
     text-align: center;
     padding-top: 40px;
+}
+
+.menu
+{
+    border-radius: 10px;
 }
 
  @media only screen and (max-width: 400px) 

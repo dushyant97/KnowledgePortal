@@ -1,6 +1,8 @@
 .row-main
 {
-    background: rgb(203, 224, 236);
+    /*background: rgb(203, 224, 236);*/
+    background: url("../../assets/images/news.jpg") no-repeat center;
+    background-size: cover;
 }
 .row1
 {

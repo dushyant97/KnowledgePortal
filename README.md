@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Dependencies:<br/>
 Loopback V3<br/>
-Angular-CLI V7
-SQL Server: link: https://drive.google.com/open?id=1ixTlLCYtbRSSZ_QRphnpUqJ0i_1lBrIH
-SQLyog : GUI Tool (Optional)
-Bootstrap V4
-JQuery V3
-db: 
+Angular-CLI V7<br/>
+SQL Server: link: https://drive.google.com/open?id=1ixTlLCYtbRSSZ_QRphnpUqJ0i_1lBrIH<br/>
+SQLyog : GUI Tool (Optional)<br/>
+Bootstrap V4<br/>
+JQuery V3<br/>
+db: <br/>

@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
+Dependencies:
+Loopback V3
+Angular-CLI V6
+SQL Server: link: https://drive.google.com/open?id=1ixTlLCYtbRSSZ_QRphnpUqJ0i_1lBrIH
+SQLyog : GUI Tool (Optional)
+Bootstrap V4
+JQuery V3
+db: 
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

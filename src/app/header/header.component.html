@@ -16,11 +16,12 @@
 
    <div class = "row row-2">
 
-                <div class="col menu"><a routerLinkActive="active" routerLink="/home">Home</a></div>
-                <div class="col menu"><a routerLinkActive="active" routerLink="/news">News</a></div>
-                <div class="col menu"><a routerLinkActive="active" routerLink="/contact">Contact</a></div>
-                <div class="col menu"><a routerLinkActive="active" routerLink="/about">About</a></div>
-                <div class="col menu"><a routerLinkActive="active" routerLink="/signup">Login/Sign Up</a></div>
-           
+        <div class="col menu"><a routerLinkActive="active" routerLink="/home">Home</a></div>
+        <div class="col menu"><a routerLinkActive="active" routerLink="/news">News</a></div>
+        <div class="col menu"><a routerLinkActive="active" routerLink="/contact">Contact</a></div>
+        <div class="col menu"><a routerLinkActive="active" routerLink="/about">About</a></div>
+        <div *ngIf="condition" class="col menu"><a routerLinkActive="active" routerLink="/signin">Login/Sign Up</a></div>
+        <div *ngIf="!condition" class="col menu"><a routerLinkActive="active" routerLink="/signin">Logout</a></div>
+        
    </div>
    

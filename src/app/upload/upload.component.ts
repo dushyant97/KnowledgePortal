@@ -10,6 +10,7 @@ export class UploadComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    sessionStorage.setItem("login","false");
   }
 
 }

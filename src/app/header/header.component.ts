@@ -9,9 +9,19 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  condition: boolean = true;
 
-    
+
+  ngOnInit() {
+    if(sessionStorage.getItem("login")=="true")
+    {
+      this.condition=true;
+    }
+    else if(sessionStorage.getItem("login")=="false")
+    {
+      this.condition=false;
+    }    
+
   }
 
 }

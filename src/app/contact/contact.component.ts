@@ -16,6 +16,7 @@ export class ContactComponent implements OnInit {
   url: string = "http://localhost:3000/api/Contacts"
 
   ngOnInit() {
+    sessionStorage.setItem("login","true");
   }
 
   mysubmit()

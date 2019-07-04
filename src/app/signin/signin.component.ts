@@ -20,7 +20,7 @@ export class SigninComponent implements OnInit {
 
 
   ngOnInit() {
-    
+    sessionStorage.setItem("login","true");
     this.http.get(this.url).subscribe((res)=>{
       this.obj = res as any;
     });
@@ -59,6 +59,7 @@ export class SigninComponent implements OnInit {
     else
     {
       sessionStorage.setItem("sessions",id+1);
+      sessionStorage.setItem("login","false");
       this.router.navigate(['/welcome']);
     }
 

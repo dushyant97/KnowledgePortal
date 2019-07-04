@@ -10,6 +10,7 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    sessionStorage.setItem("login","true");
   }
 
 }

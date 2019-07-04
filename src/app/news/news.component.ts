@@ -10,7 +10,7 @@ export class NewsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
+    sessionStorage.setItem("login","true");
     document.getElementById("demo").innerHTML = Date();
     
   }

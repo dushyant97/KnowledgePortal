@@ -25,6 +25,7 @@ export class DiscussionForumComponent implements OnInit {
 
   ngOnInit() {
 
+    sessionStorage.setItem("login","false");
   document.documentElement.scrollTop = 0;
   //This is for fetching data from discussion forum for populating it on the page
   this.http.get(this.url).subscribe((res)=>{

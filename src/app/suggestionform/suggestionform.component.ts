@@ -16,6 +16,7 @@ export class SuggestionformComponent implements OnInit {
   url : string = "http://localhost:3000/api/SuggestionForms";
 
   ngOnInit() {
+    sessionStorage.setItem("login","false");
   }
 
   closebtn()

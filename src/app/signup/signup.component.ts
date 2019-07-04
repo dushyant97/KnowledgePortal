@@ -17,6 +17,7 @@ export class SignupComponent implements OnInit {
   url : string = 'http://localhost:3000/api/Employees';
 
   ngOnInit() {
+    sessionStorage.setItem("login","true");
   }
 
   onsubmit(){

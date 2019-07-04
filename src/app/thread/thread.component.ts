@@ -30,6 +30,7 @@ export class ThreadComponent implements OnInit {
   name : string = "";
 
   ngOnInit() {
+    sessionStorage.setItem("login","false");
 /*
   // to get what was clicked passing via router 
   this.route.params.subscribe(params=>{this.parameter = params});

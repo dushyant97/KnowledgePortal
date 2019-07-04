@@ -16,6 +16,8 @@ export class WelcomeComponent implements OnInit {
   url1 :string = 'http://localhost:3000/api/Employees' + '?filter={"where" : {"empId" : ' + this.id +' }}';
  
   ngOnInit() {
+    sessionStorage.setItem("login","false");
+
  //This is to get the employee data
     this.http.get(this.url1).subscribe((res)=>{
     this.obj=res as any;

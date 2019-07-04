@@ -9,4 +9,4 @@ SQL Server: link: https://drive.google.com/open?id=1ixTlLCYtbRSSZ_QRphnpUqJ0i_1l
 SQLyog : GUI Tool (Optional)<br/>
 Bootstrap V4<br/>
 JQuery V3<br/>
-db: link: https://raw.githubusercontent.com/dushyantsharma1997/KnowledgePortal/master/database.sql?token=AG5TNOINMW4VHVKYCBWHEV25DZBOE <br/>
+db: link: https://raw.githubusercontent.com/dushyantsharma1997/KnowledgePortal/master/database.sql?token=AG5TNOKTGKUWEDAATJMQM4S5DZPLY <br/>

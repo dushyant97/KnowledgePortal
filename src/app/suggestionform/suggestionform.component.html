@@ -22,7 +22,7 @@
       </div>
     </div>  
     
-    <form method="post" name="sug">
+    <form method="post" name="sug" class="was-validated">
       <h3>Drop Us a Message</h3>
       <div class="row">
         <div class="col">
@@ -51,14 +51,12 @@
           placeholder="Enter title" 
           name="title" 
           autocomplete="off" 
-          minlength="6"
           [(ngModel)]="obj1.title"
-          #usernamecontrol="ngModel" 
+          #titlecontrol="ngModel" 
           required>
           <div class="valid-feedback">Valid.</div>
-          <div *ngIf="usernamecontrol.invalid && (usernamecontrol.dirty || usernamecontrol.touched)">
-              <div style="color: red" *ngIf="usernamecontrol.errors.required">Username is required.</div>
-              <div style="color: red" *ngIf="usernamecontrol.errors.minlength">Username must be of atleast 6 or more characters.</div>
+          <div *ngIf="titlecontrol.invalid && (titlecontrol.dirty || titlecontrol.touched)">
+              <div style="color: red" *ngIf="titlecontrol.errors.required">Title required.</div>
           </div>
         </div>
       </div>
@@ -72,8 +70,13 @@
           id="suggest" 
           name="suggestion" 
           rows="5" 
-          [(ngModel)]="obj1.suggestion" 
+          [(ngModel)]="obj1.suggestion"
+          #suggestioncontrol="ngModel" 
           required></textarea> 
+          <div class="valid-feedback">Valid.</div>
+          <div *ngIf="suggestioncontrol.invalid && (suggestioncontrol.dirty || suggestioncontrol.touched)">
+              <div style="color: red" *ngIf="suggestioncontrol.errors.required">Title required.</div>
+          </div>
         </div>
       </div>
     </div>

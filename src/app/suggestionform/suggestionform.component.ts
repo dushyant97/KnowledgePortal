@@ -24,16 +24,29 @@ export class SuggestionformComponent implements OnInit {
   }
 
   mysubmit(){
-    this.condition=true;
-    document.documentElement.scrollTop = 0; 
-    console.log(this.obj1);
 
-    //posting the details to database
-    this.http.post(this.url, this.obj1, {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    }).subscribe((res)=>{});
-    window.location.href = "/suggestform";
+    var x  = document.forms["sug"]["user"].value;
+    var y  = document.forms["sug"]["title"].value;
+    var z  = document.forms["sug"]["suggestion"].value;
+
+    if(x == "" || y == "" || z == "")
+    {
+      alert("Please fill the form");
+    }
+    else if(x.length < 6)
+    {
+      alert("Invalid Username!!");
+    }
+    else
+    {      
+      alert("Thank you for your Suggestion.");
+      this.http.post(this.url, this.obj1, {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json'
+        })
+      }).subscribe((res)=>{});
+      window.location.href = "/suggestform";
+    }
+
   }
 }
